@@ -4,13 +4,436 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/modern-normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <body class="body">
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar__content">
+            <h1 class="navbar__name">Georgy</h1>
+            <ul class="nav-list">
+              <li class="nav-list__item">
+                <a class="link link--nav link--on" href="#">Home</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#">About</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#">Projects</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#">Services</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#">Resume</a>
+              </li>
+            </ul>
+            <button class="button button--nav">Contact me</button>
+            <button class="button button--theme" id="theme-switch">
+              <img
+                src="assets/darkmode-theme-icon.svg"
+                alt="theme toggle"
+                class="button__theme-icon" />
+              <img
+                src="assets/lgihtmode-theme-icon.svg"
+                alt="theme toggle"
+                class="button__theme-icon" />
+            </button>
+            <button class="button button--menu">
+              <img src="assets/Menu-icon.svg" alt="menu" />
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container container--main">
+        <div class="hero">
+          <div class="hero__background"></div>
+          <img src="assets/avatar.png" alt="Avatar" class="hero__avatar" />
+          <!--only one h1 per page. Времено заменю подзагаловки на p-->
+          <h2 class="hero__name">Georgy Georgy</h2>
+          <div class="gradient-wrapper">
+            <p class="gradient gradient--hero">Data Sorcerer</p>
+            <p class="gradient--hero">🧙‍♂️</p>
+          </div>
+          <!--Пофиксить мага-->
+          <p class="hero__about-me">
+            As a passionate data scientist, with expertise in machine learning,
+            AI, and data analytics, I thrive on the challenges of exploring
+            complex data landscapes and uncovering meaningful patterns that
+            drive innovation
+          </p>
+          <button class="button button--hero">Contact me</button>
+        </div>
+        <div class="about">
+          <h2 class="title title--about">About me</h2>
+          <p class="gradient gradient--about">Get to know me</p>
+          <p class="about__text">
+            Hi there! I'm [Your Name], a data scientist specializing in data
+            analytics, predictive modeling, natural language processing, machine
+            learning, and AI chatbots. With a passion for unraveling insights
+            from complex datasets, I'm dedicated to helping businesses make
+            informed decisions and stay ahead in today's data-driven world.<br />
+            I bring a blend of technical expertise, hands-on experience, and a
+            commitment to clear communication to every project. Whether it's
+            uncovering hidden patterns, predicting future trends, or automating
+            processes with AI, I'm here to help you harness the full potential
+            of your data.<br />
+            Let's work together to transform your data into actionable insights
+            that drive real results. Get in touch, and let's start unlocking the
+            power of your data today!
+          </p>
+          <a href="#" class="link button button--about">Download Resume</a>
+        </div>
+        <div class="services">
+          <h2 class="title title--services">What I do</h2>
+          <p class="gradient gradient--services">My Services</p>
+          <div class="services__card-wrapper">
+            <div class="services__card">
+              <img
+                src="assets/cards_sun-icon.svg"
+                alt="vector"
+                class="services__card-icon" />
+              <p class="services__card-name">Data Analytics & Visualization</p>
+              <p class="services__card-text">
+                From data inception to actionable insights, I design compelling
+                analytics and visualization solutions that illuminate trends,
+                empower decision-making, and drive your business forward.
+              </p>
+            </div>
+            <div class="services__card">
+              <img
+                src="assets/cards_sun-icon.svg"
+                alt="vector"
+                class="services__card-icon" />
+              <p class="services__card-name">
+                Predictive Analytics and Forecasting
+              </p>
+              <p class="services__card-text">
+                From data to foresight, I craft predictive analytics and
+                forecasting solutions that steer your business with precision,
+                empowering strategic decisions and ensuring future success
+              </p>
+            </div>
+            <div class="services__card">
+              <img
+                src="assets/cards_sun-icon.svg"
+                alt="vector"
+                class="services__card-icon" />
+              <p class="services__card-name">Natural Language Processing</p>
+              <p class="services__card-text">
+                From text to insight, I craft Natural Language Processing
+                solutions that decode language intricacies, revolutionizing data
+                comprehension and empowering your business for success in the
+                digital age
+              </p>
+            </div>
+            <div class="services__card services__card--chatbots">
+              <div class="services__card-ai-wrapper">
+                <img
+                  src="assets/cards_ai-chatbots.svg"
+                  alt="ai-chatbots"
+                  class="services__card-icon" />
+                <p class="services__card-name">AI Chatbots</p>
+                <p class="services__card-text">
+                  From design to deployment, I build AI Chatbots that enhance
+                  customer interactions, streamline processes, and elevate your
+                  brand's engagement, bringing innovative solutions to your
+                  audience's fingertips
+                </p>
+              </div>
+              <img
+                src="assets/ai_head.jpg"
+                alt="Ai head"
+                class="services__card-image" />
+            </div>
+            <div class="services__card">
+              <img
+                src="assets/cards_machine-learning.svg"
+                alt="machine-learning"
+                class="services__card-icon" />
+              <p class="services__card-name">Machine Learning</p>
+              <p class="services__card-text">
+                From concept to automation, I craft Machine Learning solutions
+                that decode patterns and optimize performance, driving your
+                business into the era of intelligent automation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects">
+          <h2 class="title">Projects</h2>
+          <p class="gradient gradient--projects">Some of my Work</p>
+          <ul class="nav-list nav-list--projects">
+            <li>
+              <button
+                class="button projects__button projects__button--border-machine"
+                id="projects__button--active">
+                Machine learning
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-sql">
+                Sql
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-bi">
+                Power BI
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-llm">
+                AI/LLMs
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-data">
+                Spatial Data Science
+              </button>
+            </li>
+          </ul>
+          <div class="projects__card-wrapper">
+            <div class="projects__card">
+              <img
+                src="assets/projects_image1.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Project name/description</p>
+              <p class="projects__text-description">Technology used</p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card">
+              <img
+                src="assets/projects_image1.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Project name/description</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card">
+              <img
+                src="assets/projects_image2.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Project name/description</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card projects__card--mobile">
+              <img
+                src="assets/projects_image3.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Educational Platform</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card projects__card--mobile">
+              <img
+                src="assets/projects_image4.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Educational Platform</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card projects__card--mobile">
+              <img
+                src="assets/projects_image5.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Educational Platform</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+          </div>
+          <a href="#" class="link link--projects">View All</a>
+        </div>
+        <div class="contact">
+          <h2 class="title">Get In Touch</h2>
+          <p class="gradient gradient--contact">Lets work together</p>
+          <form action="#" class="form">
+            <p class="form__label">Name</p>
+            <input type="text" placeholder="full name" class="form__input" />
+            <p class="form__label">Email</p>
+            <input
+              type="text"
+              placeholder="example@email.com"
+              class="form__input" />
+            <p class="form__label">Service</p>
+            <select
+              id="service"
+              name="service"
+              class="form__input form__input--select"
+              required>
+              <option value="" disabled selected hidden>
+                Select a service
+              </option>
+              <option value="">#1</option>
+              <option value="">#2</option>
+              <option value="">#3</option>
+              <option value="">#4</option>
+            </select>
+            <img
+              src="assets/dropdown-icon.svg"
+              alt="dropdown menu"
+              class="form__icon" />
+            <p class="form__label">Message</p>
+            <!--  <input type="text" class="form__input form__input--message" /><br /> -->
+            <textarea class="form__input form__input--message"></textarea>
+            <input type="submit" value="Get in Touch" class="form__submit" />
+          </form>
+        </div>
+        <div class="work-together">
+          <h2 class="title title--work-together">
+            Let’s<br />
+            Work Together -
+          </h2>
+          <div class="work-together__wrapper">
+            <img
+              src="assets/gmail-icon.svg"
+              alt="Gmail"
+              class="work-together__icon" />
+            <p class="work-together__email">Georgy@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <hr class="footer__line" />
+      <div class="container">
+        <div class="footer__wrapper">
+          <p class="footer__text-rights">© 2023 All rights reserved.</p>
+          <div class="footer__socials">
+            <a href="#"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__icon">
+                <path
+                  d="M7.87305 12.6094H11.5757V22.2708H7.87305V12.6094Z"
+                  fill="#A9A9A9" />
+                <path
+                  d="M9.68841 11.0681C10.7234 11.0681 11.5624 10.3027 11.5624 9.3585C11.5624 8.41433 10.7234 7.64893 9.68841 7.64893C8.65345 7.64893 7.81445 8.41433 7.81445 9.3585C7.81445 10.3027 8.65345 11.0681 9.68841 11.0681Z"
+                  fill="#A9A9A9" />
+                <path
+                  d="M20.8831 12.3911C20.1248 12.3911 19.4823 12.5292 18.9541 12.8051C18.4265 13.0813 17.9052 13.5405 17.3895 14.1833V12.6094H13.9414V22.2709H17.6441V17.6311C17.6441 16.7516 17.7837 16.1424 18.0628 15.8026C18.3418 15.4631 18.7053 15.2932 19.1543 15.2932C19.5606 15.2932 19.876 15.4192 20.1006 15.6709C20.3252 15.9226 20.437 16.3515 20.437 16.9583V22.2709H24.1581V16.1303C24.1581 14.8566 23.8682 13.915 23.2888 13.3053C22.7102 12.6957 21.9077 12.3911 20.8831 12.3911Z"
+                  fill="#A9A9A9" />
+              </svg>
+            </a>
+            <a href="#"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__icon">
+                <path
+                  d="M15.9326 7.05762C11.0017 7.05762 6.99023 11.0691 6.99023 15.9997C6.99023 20.9306 11.0017 24.9421 15.9326 24.9421C20.8635 24.9421 24.875 20.9306 24.875 15.9997C24.875 11.0691 20.8635 7.05762 15.9326 7.05762ZM21.7701 11.518C22.723 12.7537 23.2563 14.2614 23.2922 15.8214C21.4258 15.5316 19.7697 15.5734 18.3176 15.8314C18.0825 15.2808 17.8322 14.7369 17.5669 14.2002C19.0651 13.5645 20.5274 12.6989 21.7701 11.518ZM20.6784 10.3752C19.5585 11.4373 18.2142 12.2166 16.8271 12.7884C15.7643 10.8692 14.7527 9.47022 14.2625 8.82873C14.8099 8.70069 15.3702 8.63591 15.9323 8.63568C17.7397 8.63568 19.3957 9.29111 20.6784 10.3752ZM12.9745 9.2577L12.7428 9.44865C12.7673 9.47837 13.9766 10.9694 15.3085 13.3331C12.5624 14.1821 9.91123 14.332 8.75609 14.3522C9.28106 12.0667 10.871 10.1846 12.9745 9.2577ZM8.5683 15.9997C8.5683 15.9779 8.56961 15.9563 8.56988 15.9345C9.73843 15.9327 12.8438 15.8151 16.0683 14.7604C16.3083 15.2391 16.5361 15.7238 16.7514 16.2141C13.2233 17.3069 11.1482 19.6235 10.3123 20.7507C9.22556 19.4675 8.5683 17.8092 8.5683 15.9997ZM11.4583 21.8436C12.0435 20.9804 13.8906 18.6588 17.3421 17.6601C17.9404 19.2537 18.427 20.9953 18.6587 22.8083L18.7729 22.7936C17.8736 23.171 16.9079 23.365 15.9326 23.364C14.3142 23.3653 12.7408 22.8307 11.4583 21.8436ZM20.141 22.0374C19.8833 20.376 19.4414 18.7892 18.9078 17.3237C20.1539 17.1436 21.5687 17.1396 23.1617 17.3989C22.7924 19.3108 21.6818 20.9604 20.141 22.0374Z"
+                  fill="#A9A9A9" />
+              </svg>
+            </a>
+            <a href="#"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__icon">
+                <path
+                  d="M20.9272 6.61133H17.4565C17.4486 6.61128 17.4407 6.61163 17.4329 6.61239C13.9288 6.62343 13.4711 9.07022 13.4693 11.2088C13.4644 11.229 13.462 11.2498 13.4619 11.2706V12.7718H11.0638C10.994 12.7718 10.9271 12.7995 10.8778 12.8489C10.8285 12.8982 10.8008 12.9651 10.8008 13.0348V16.7373C10.8008 16.807 10.8285 16.8739 10.8778 16.9232C10.9271 16.9726 10.994 17.0003 11.0638 17.0003H13.4619V25.1249C13.4619 25.1947 13.4896 25.2616 13.539 25.3109C13.5883 25.3602 13.6552 25.3879 13.7249 25.3879H17.2248C17.2946 25.3879 17.3615 25.3602 17.4108 25.3109C17.4601 25.2616 17.4878 25.1947 17.4878 25.1249V17.0005H20.927C20.9967 17.0005 21.0636 16.9728 21.1129 16.9235C21.1623 16.8742 21.19 16.8073 21.19 16.7375V13.0351C21.19 12.9654 21.1623 12.8985 21.1129 12.8491C21.0636 12.7998 20.9967 12.7721 20.927 12.7721H17.2248V10.7819H20.927C20.9967 10.7819 21.0636 10.7542 21.1129 10.7049C21.1623 10.6555 21.19 10.5886 21.19 10.5189V6.87434C21.19 6.83982 21.1832 6.80562 21.17 6.77371C21.1569 6.74181 21.1375 6.71281 21.1131 6.68838C21.0887 6.66396 21.0597 6.64458 21.0278 6.63136C20.9959 6.61814 20.9617 6.61133 20.9272 6.61133Z"
+                  fill="#A9A9A9" />
+              </svg>
+            </a>
+            <a href="#"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__icon">
+                <path
+                  d="M21.002 8.29346H10.9891C9.51225 8.29346 8.31055 9.49489 8.31055 10.972V21.0308C8.31055 22.5076 9.51199 23.7093 10.9891 23.7093H21.0017C22.4785 23.7093 23.6802 22.5079 23.6802 21.0308V10.9717C23.6802 9.49489 22.4788 8.29346 21.002 8.29346ZM18.3116 15.9728C18.3116 17.25 17.2727 18.2889 15.9955 18.2889C14.7183 18.2889 13.6794 17.25 13.6794 15.9728C13.6794 15.3393 13.9356 14.7648 14.3491 14.3464H17.6417C18.0712 14.7787 18.312 15.3635 18.3116 15.9728ZM18.9831 10.4365H21.3292V12.8533H18.9831V10.4365ZM21.002 22.131H10.9891C10.6973 22.1306 10.4176 22.0146 10.2113 21.8083C10.005 21.602 9.88897 21.3223 9.88862 21.0305V14.3464H12.4619C12.225 14.8559 12.1019 15.4109 12.1014 15.9728C12.1014 18.1203 13.8483 19.867 15.9955 19.867C18.1428 19.867 19.8897 18.1201 19.8897 15.9728C19.8897 15.3919 19.7582 14.8422 19.5291 14.3464H22.1022V21.0305C22.1018 21.3222 21.9858 21.6019 21.7796 21.8082C21.5733 22.0145 21.2937 22.1306 21.002 22.131Z"
+                  fill="#A9A9A9" />
+              </svg>
+            </a>
+            <a href="#"
+              ><svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__icon">
+                <path
+                  d="M23.1403 10.787C23.508 10.5971 24.3885 10.0329 24.8036 8.822C24.8036 8.822 23.8033 9.54528 22.442 9.63049L22.4173 9.64417C22.0605 9.2538 21.6262 8.94216 21.1422 8.72917C20.6582 8.51618 20.135 8.40653 19.6062 8.40723C17.5 8.40723 15.7928 10.1147 15.7928 12.2209C15.7928 12.5404 15.8325 12.8508 15.9069 13.1475L15.8885 13.1199C15.8885 13.1199 11.804 13.3539 7.95324 9.14129C7.95324 9.14129 6.25077 12.0347 9.16572 14.2474C8.52739 14.3536 7.40013 13.7792 7.40013 13.7792C7.40013 13.7792 7.46378 16.8212 10.4847 17.5661C9.99552 17.6939 9.0805 17.736 8.78278 17.6087C8.78278 17.6087 9.22937 19.9274 12.3145 20.3319C11.5273 20.7787 10.0594 22.1401 6.74023 21.8847C6.74023 21.8847 9.12364 23.8418 13.5488 23.5656C17.974 23.2894 21.1866 20.3103 22.4843 17.1618C23.782 14.0133 23.4209 12.2206 23.4209 12.2206C23.4209 12.2206 24.5053 11.6515 25.2507 10.2901C24.9064 10.3932 23.6295 10.7052 23.1542 10.8206C23.1494 10.8095 23.1448 10.7982 23.1403 10.787Z"
+                  fill="#A9A9A9" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
