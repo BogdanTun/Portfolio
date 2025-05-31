@@ -781,6 +781,7 @@ br {
   }
   .form__submit {
     padding: 16px 110.1px;
+    font-size: 16px;
   }
   .title--work-together {
     font-size: 18px;
@@ -793,6 +794,8 @@ br {
   }
   .work-together__icon {
     margin: 0;
+    width: 15px;
+    height: 15px;
   }
   .work-together__email {
     font-size: 10px;
@@ -801,5 +804,8 @@ br {
     flex-direction: column-reverse;
     align-items: center;
     gap: 32px;
+  }
+  .footer__text-rights {
+    font-size: 12px;
   }
 }
