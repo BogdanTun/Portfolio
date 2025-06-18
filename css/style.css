@@ -8,6 +8,7 @@
   --secondary-text-button-color: #ffffff;
   --button-border-color: #4fc3f7;
   --secondary-button-border-color: #4fc3f7;
+  --link--on: #4fc3f7;
   /* hero */
   --title-text-color: #ffffff;
   --title-secondary-text-color: #ffffff;
@@ -23,16 +24,23 @@
   --services-backround-gradient-color: #282828;
   --services-backround-secondary-gradient-color: #1f1f1f;
   /* projects */
+  --projects-button: #484e53;
   --form-button-text-color: #000000;
-  --workTogether-text-color: #dedede;
+  --work-together-text-color: #dedede;
   --email-text-color: #c9c9c9;
   --right-text-color: #a9a9a9;
-  --socials-icon-color: #a9a9a9;
+  --socials-icon-color: brightness(0) saturate(100%) invert(63%) sepia(65%)
+    saturate(0%) hue-rotate(245deg) brightness(97%) contrast(84%);
+  --socials-icon-border: #484e53;
   --services-border-color: #444444;
   --projects-button-text-color: #a9a9a9;
   --projects-title-text-color: #c1c1c1;
   --form-border-color: #d6dded;
   --form-input-text-color: #ffffff;
+  --form-placeholder: #8987a1;
+  --footer-line: #484e53;
+  --projects-active-button-text: #f5f5f5;
+  --work-together-border-color: #484e53;
 }
 .lightmode {
   /* Base */
@@ -59,15 +67,17 @@
   --services-backround-secondary-gradient-color: #e5edfb;
   /* something */
   --form-button-text-color: #ffffff;
-  --workTogether-text-color: #282938;
+  --work-together-text-color: #282938;
   --email-text-color: #484e53;
   --right-text-color: #282938;
-  --socials-icon-color: #484e53;
+  --socials-icon-color: brightness(0) saturate(100%) invert(30%) sepia(6%)
+    saturate(717%) hue-rotate(165deg) brightness(90%) contrast(86%);
   --services-border-color: #ffffff;
   --projects-button-text-color: #484e53;
   --projects-title-text-color: #484e53;
   --form-border-color: #484e53;
   --form-input-text-color: #000000;
+  --projects-active-button-text: #f5f5f5;
 }
 * {
   margin: 0;
@@ -75,6 +85,7 @@
   box-sizing: border-box;
   /*transition: all 0.3s ease;*/
 }
+
 .body {
   background-color: var(--background-color);
   font-family: "Poppins", sans-serif;
@@ -107,7 +118,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 15px;
+  font-size: 0.938rem;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -128,7 +139,7 @@
   align-items: center;
 }
 .navbar__name {
-  font-size: 32px;
+  font-size: 2rem;
   color: var(--navbar-name-color);
   font-family: "Oleo Script", system-ui;
   font-weight: 400;
@@ -149,7 +160,6 @@
   list-style: none;
 }
 .link {
-  /* color: #ffffff; */
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -158,15 +168,15 @@
   line-height: 100%;
 }
 .link--nav {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--navbar-link-color);
 }
 .link--on {
-  color: #4fc3f7;
+  color: var(--link--on);
 }
 .button--nav {
   border-radius: 9px;
-  padding: 13.5px 19px;
+  padding: 14px 19px;
 }
 .container--main {
   align-items: center;
@@ -191,8 +201,8 @@
 }
 .hero__name {
   font-weight: 700;
-  font-size: 63px;
-  letter-spacing: -6%;
+  font-size: 3.938rem;
+  letter-spacing: -0.06em;
   margin-bottom: 15px;
   color: var(--title-text-color);
   line-height: 100%;
@@ -202,7 +212,7 @@
   flex-direction: row;
 }
 .gradient {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
   background: -webkit-linear-gradient(
     left,
@@ -227,23 +237,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 100%;
-  letter-spacing: -3%;
+  letter-spacing: -0.03em;
 }
 .gradient--hero {
-  font-size: 26px;
+  font-size: 1.625rem;
 }
 .hero__about-me {
   margin-top: 8px;
   text-align: center;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 1.188rem;
   line-height: 30px;
   margin-bottom: 40px;
   color: var(--text-color);
 }
 .button--hero {
   border-radius: 75px;
-  padding: 18.5px 49.5px;
+  padding: 19px 50px;
   line-height: 100%;
 }
 .about {
@@ -258,9 +268,9 @@
 }
 .title {
   font-weight: 800;
-  font-size: 45px;
+  font-size: 2.813rem;
   line-height: 100%;
-  letter-spacing: -3%;
+  letter-spacing: -0.03em;
   color: var(--title-text-color);
 }
 .title--about {
@@ -272,7 +282,7 @@
 .about__text {
   font-weight: 500;
   text-align: center;
-  font-size: 17px;
+  font-size: 1.063rem;
   line-height: 25px;
   color: var(--secondary-text-color);
   margin-bottom: 40px;
@@ -283,7 +293,7 @@ br {
 }
 .button--about {
   border-radius: 55px;
-  padding: 18.5px 35px;
+  padding: 19px 35px;
   line-height: 100%;
   color: var(--secondary-text-button-color);
 }
@@ -301,12 +311,6 @@ br {
   grid: repeat(2, 1fr) / repeat(3, 1fr);
   justify-items: center;
   gap: 20px;
-  /*
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  */
 }
 .services__card {
   border: 1px solid var(--services-border-color);
@@ -335,7 +339,7 @@ br {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 15px;
+  font-size: 0.938rem;
   line-height: 120%;
   color: var(--title-text-color);
 }
@@ -344,7 +348,7 @@ br {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   color: var(--secondary-text-color);
 }
@@ -385,31 +389,31 @@ br {
   margin-bottom: 40px;
 }
 .projects__button {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   line-height: 150%;
   color: var(--projects-button-text-color);
-  border: 1px solid #484e53;
+  border: 1px solid var(--projects-button);
   border-radius: 50px;
 }
 .projects__button--border-machine {
-  padding: 15.5px 32px;
+  padding: 16px 32px;
 }
 #projects__button--active {
-  color: #ffffff;
-  background-color: #484e53;
+  color: var(--projects-active-button-text);
+  background-color: var(--projects-button);
 }
 .projects__button--border-sql {
-  padding: 15.5px 58.5px;
+  padding: 16px 59px;
 }
 .projects__button--border-bi {
-  padding: 15.5px 31px;
+  padding: 16px 31px;
 }
 .projects__button--border-llm {
-  padding: 15.5px 33.5px;
+  padding: 16px 34px;
 }
 .projects__button--border-data {
   padding: 16px 34px;
@@ -441,7 +445,7 @@ br {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 150%;
   color: var(--projects-title-text-color);
   margin-bottom: 16px;
@@ -451,7 +455,7 @@ br {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   color: var(--projects-button-text-color);
   gap: 0px;
@@ -464,9 +468,9 @@ br {
   bottom: 0%;
 }
 .link--projects {
-  border: 1px solid #484e53;
+  border: 1px solid var(--projects-button);
   border-radius: 75px;
-  padding: 19px 74.5px;
+  padding: 19px 75px;
   color: var(--text-button-color);
 }
 .contact {
@@ -487,7 +491,7 @@ br {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 120%;
   color: var(--title-tertiary-text-color);
   margin-bottom: 16px;
@@ -501,7 +505,7 @@ br {
   font-weight: 400;
   font-style: normal;
   line-height: 150%;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: transparent;
   border: 1px solid var(--form-border-color);
   border-radius: 10px;
@@ -509,15 +513,15 @@ br {
   margin-bottom: 16px;
 }
 ::placeholder {
-  color: #8987a1;
+  color: var(--form-placeholder);
   opacity: 1; /* Firefox */
 }
 ::-ms-input-placeholder {
   /* Edge 12 -18 */
-  color: #8987a1;
+  color: var(--form-placeholder);
 }
 .form__input--select {
-  color: #8987a1;
+  color: var(--form-placeholder);
   background-color: var(--background-color);
   margin-bottom: 24px;
   appearance: none; /* Скрывает стрелку в Chrome */
@@ -543,7 +547,7 @@ br {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 150%;
   cursor: pointer;
   border-radius: 10px;
@@ -557,18 +561,18 @@ br {
   margin-bottom: 40px;
 }
 .title--work-together {
-  color: var(--workTogether-text-color);
+  color: var(--work-together-text-color);
   font-weight: 500;
-  font-size: 63px;
+  font-size: 3.938rem;
   line-height: 106%;
-  letter-spacing: 7%;
+  letter-spacing: 0.07em;
 }
 .work-together__wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 19px 27px;
-  border: 1.56px solid #484e53;
+  border: 1.56px solid var(--work-together-border-color);
   border-radius: 15px;
 }
 .work-together__icon {
@@ -580,11 +584,11 @@ br {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 24.9px;
+  font-size: 1.556rem;
   line-height: 149%;
 }
 .footer__line {
-  color: #484e53;
+  color: var(--footer-line);
   margin-bottom: 45px;
 }
 .footer__wrapper {
@@ -600,9 +604,9 @@ br {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 154%;
-  letter-spacing: 2.5%;
+  letter-spacing: 0.025em;
   color: var(--right-text-color);
 }
 .footer__socials {
@@ -614,12 +618,15 @@ br {
   width: 32px;
   height: 32px;
   padding: 1px;
-  border: 2px solid #484e53;
+  border: 2px solid var(--socials-icon-border);
   border-radius: 50%;
+  filter: var(--socials-icon-color);
 }
+/*
 .footer__icon path {
   fill: var(--socials-icon-color);
 }
+*/
 @media only screen and (max-width: 850px) {
   .nav-list,
   .button--nav,
@@ -627,7 +634,7 @@ br {
     display: none;
   }
   .button {
-    font-size: 13px;
+    font-size: 0.813rem;
   }
   .container {
     padding: 0px 24px;
@@ -636,7 +643,7 @@ br {
     display: block;
   }
   .navbar__name {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .navbar__content {
     margin-top: 29px;
@@ -648,38 +655,38 @@ br {
     margin-bottom: 116px;
   }
   .hero__name {
-    font-size: 42px;
+    font-size: 2.625rem;
     margin-top: 19px;
   }
   .gradient--hero {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .hero__about-me {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 32px;
     margin-top: 38px;
   }
   .button--hero {
-    padding: 12.5px 43.5px;
+    padding: 13px 44px;
   }
   .title {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .gradient {
     font-weight: 400;
   }
   .about {
-    margin-bottom: 107.5px;
+    margin-bottom: 108px;
   }
   .gradient--about {
     margin-bottom: 34px;
   }
   .about__text {
-    font-size: 13px;
+    font-size: 0.813rem;
     margin-bottom: 37px;
   }
   .button--about {
-    padding: 11.5px 30.5px;
+    padding: 12px 31px;
   }
   .services {
     margin-bottom: 79px;
@@ -693,10 +700,10 @@ br {
     align-items: center;
   }
   .services__card-name {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .services__card-text {
-    font-size: 13px;
+    font-size: 0.813rem;
   }
   .services__card--chatbots {
     flex-direction: column;
@@ -720,22 +727,22 @@ br {
     row-gap: 33px;
   }
   .projects {
-    margin-bottom: 97.6px;
+    margin-bottom: 98px;
   }
   .projects__button--border-machine {
-    padding: 9.5px 13px;
+    padding: 10px 13px;
   }
   .projects__button--border-sql {
-    padding: 9.5px 33px;
+    padding: 10px 33px;
   }
   .projects__button--border-bi {
-    padding: 9.5px 19px;
+    padding: 10px 19px;
   }
   .projects__button--border-llm {
-    padding: 9.5px 26.5px;
+    padding: 10px 27px;
   }
   .projects__button--border-data {
-    padding: 9.5px 20px;
+    padding: 10px 20px;
   }
   .projects__card-wrapper {
     display: flex;
@@ -747,7 +754,7 @@ br {
     display: none;
   }
   .projects__text-title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .link--projects {
     display: none;
@@ -764,12 +771,12 @@ br {
     width: 330px;
   }
   .form__label {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .form__input {
     width: 331px;
     height: 55px;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 0px 34px;
   }
   .form__icon {
@@ -781,10 +788,10 @@ br {
   }
   .form__submit {
     padding: 16px 110.1px;
-    font-size: 16px;
+    font-size: 1rem;
   }
   .title--work-together {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .work-together {
     margin-bottom: 46px;
@@ -798,7 +805,7 @@ br {
     height: 15px;
   }
   .work-together__email {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   .footer__wrapper {
     flex-direction: column-reverse;
@@ -806,6 +813,6 @@ br {
     gap: 32px;
   }
   .footer__text-rights {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
