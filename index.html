@@ -4,13 +4,395 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/modern-normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <body class="body">
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar__content">
+            <h1 class="navbar__name">Georgy</h1>
+            <ul class="nav-list">
+              <li class="nav-list__item">
+                <a class="link link--nav link--on" href="#">Home</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#about">About</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#projects">Projects</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#services">Services</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#resume">Resume</a>
+              </li>
+            </ul>
+            <button class="button button--nav">Contact me</button>
+            <button class="button button--theme" id="theme-switch">
+              <img
+                src="assets/darkmode-theme-icon.svg"
+                alt="theme toggle"
+                class="button__theme-icon" />
+              <img
+                src="assets/lgihtmode-theme-icon.svg"
+                alt="theme toggle"
+                class="button__theme-icon" />
+            </button>
+            <button class="button button--menu">
+              <img src="assets/Menu-icon.svg" alt="menu" />
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container container--main">
+        <div class="hero">
+          <div class="hero__background"></div>
+          <img src="assets/avatar.png" alt="Avatar" class="hero__avatar" />
+          <!--only one h1 per page. Времено заменю подзагаловки на p-->
+          <h2 class="hero__name">Georgy Georgy</h2>
+          <div class="gradient-wrapper">
+            <p class="gradient gradient--hero">Data Sorcerer</p>
+            <p class="gradient--hero">🧙‍♂️</p>
+          </div>
+          <!--Пофиксить мага-->
+          <p class="hero__about-me">
+            As a passionate data scientist, with expertise in machine learning,
+            AI, and data analytics, I thrive on the challenges of exploring
+            complex data landscapes and uncovering meaningful patterns that
+            drive innovation
+          </p>
+          <button class="button button--hero">Contact me</button>
+        </div>
+        <div class="about" id="about">
+          <h2 class="title title--about">About me</h2>
+          <p class="gradient gradient--about">Get to know me</p>
+          <p class="about__text">
+            Hi there! I'm [Your Name], a data scientist specializing in data
+            analytics, predictive modeling, natural language processing, machine
+            learning, and AI chatbots. With a passion for unraveling insights
+            from complex datasets, I'm dedicated to helping businesses make
+            informed decisions and stay ahead in today's data-driven world.<br />
+            I bring a blend of technical expertise, hands-on experience, and a
+            commitment to clear communication to every project. Whether it's
+            uncovering hidden patterns, predicting future trends, or automating
+            processes with AI, I'm here to help you harness the full potential
+            of your data.<br />
+            Let's work together to transform your data into actionable insights
+            that drive real results. Get in touch, and let's start unlocking the
+            power of your data today!
+          </p>
+          <a href="#" class="link button button--about">Download Resume</a>
+        </div>
+        <div class="services" id="services">
+          <h2 class="title title--services">What I do</h2>
+          <p class="gradient gradient--services">My Services</p>
+          <div class="services__card-wrapper">
+            <div class="services__card">
+              <img
+                src="assets/cards_sun-icon.svg"
+                alt="vector"
+                class="services__card-icon" />
+              <p class="services__card-name">Data Analytics & Visualization</p>
+              <p class="services__card-text">
+                From data inception to actionable insights, I design compelling
+                analytics and visualization solutions that illuminate trends,
+                empower decision-making, and drive your business forward.
+              </p>
+            </div>
+            <div class="services__card">
+              <img
+                src="assets/cards_sun-icon.svg"
+                alt="vector"
+                class="services__card-icon" />
+              <p class="services__card-name">
+                Predictive Analytics and Forecasting
+              </p>
+              <p class="services__card-text">
+                From data to foresight, I craft predictive analytics and
+                forecasting solutions that steer your business with precision,
+                empowering strategic decisions and ensuring future success
+              </p>
+            </div>
+            <div class="services__card">
+              <img
+                src="assets/cards_sun-icon.svg"
+                alt="vector"
+                class="services__card-icon" />
+              <p class="services__card-name">Natural Language Processing</p>
+              <p class="services__card-text">
+                From text to insight, I craft Natural Language Processing
+                solutions that decode language intricacies, revolutionizing data
+                comprehension and empowering your business for success in the
+                digital age
+              </p>
+            </div>
+            <div class="services__card services__card--chatbots">
+              <div class="services__card-ai-wrapper">
+                <img
+                  src="assets/cards_ai-chatbots.svg"
+                  alt="ai-chatbots"
+                  class="services__card-icon" />
+                <p class="services__card-name">AI Chatbots</p>
+                <p class="services__card-text">
+                  From design to deployment, I build AI Chatbots that enhance
+                  customer interactions, streamline processes, and elevate your
+                  brand's engagement, bringing innovative solutions to your
+                  audience's fingertips
+                </p>
+              </div>
+              <img
+                src="assets/ai_head.jpg"
+                alt="Ai head"
+                class="services__card-image" />
+            </div>
+            <div class="services__card">
+              <img
+                src="assets/cards_machine-learning.svg"
+                alt="machine-learning"
+                class="services__card-icon" />
+              <p class="services__card-name">Machine Learning</p>
+              <p class="services__card-text">
+                From concept to automation, I craft Machine Learning solutions
+                that decode patterns and optimize performance, driving your
+                business into the era of intelligent automation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="projects" id="projects">
+          <h2 class="title">Projects</h2>
+          <p class="gradient gradient--projects">Some of my Work</p>
+          <ul class="nav-list nav-list--projects">
+            <li>
+              <button
+                class="button projects__button projects__button--border-machine"
+                id="projects__button--active">
+                Machine learning
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-sql">
+                Sql
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-bi">
+                Power BI
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-llm">
+                AI/LLMs
+              </button>
+            </li>
+            <li>
+              <button
+                class="button projects__button projects__button--border-data">
+                Spatial Data Science
+              </button>
+            </li>
+          </ul>
+          <div class="projects__card-wrapper">
+            <div class="projects__card">
+              <img
+                src="assets/projects_image1.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Project name/description</p>
+              <p class="projects__text-description">Technology used</p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card">
+              <img
+                src="assets/projects_image1.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Project name/description</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card">
+              <img
+                src="assets/projects_image2.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Project name/description</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card projects__card--mobile">
+              <img
+                src="assets/projects_image3.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Educational Platform</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card projects__card--mobile">
+              <img
+                src="assets/projects_image4.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Educational Platform</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+            <div class="projects__card projects__card--mobile">
+              <img
+                src="assets/projects_image5.jpg"
+                alt=""
+                class="projects__image" />
+              <p class="projects__text-title">Educational Platform</p>
+              <p class="projects__text-description">
+                Web Design / Usability Testing
+              </p>
+              <a href="#"
+                ><img
+                  src="assets/arrow.svg"
+                  alt="arrow"
+                  class="projects__card-arrow"
+              /></a>
+            </div>
+          </div>
+          <a href="#" class="link link--projects">View All</a>
+        </div>
+        <div class="contact" id="resume">
+          <h2 class="title">Get In Touch</h2>
+          <p class="gradient gradient--contact">Lets work together</p>
+          <form action="#" class="form">
+            <p class="form__label">Name</p>
+            <input type="text" placeholder="full name" class="form__input" />
+            <p class="form__label">Email</p>
+            <input
+              type="text"
+              placeholder="example@email.com"
+              class="form__input" />
+            <p class="form__label">Service</p>
+            <select
+              id="service"
+              name="service"
+              class="form__input form__input--select"
+              required>
+              <option value="" disabled selected hidden>
+                Select a service
+              </option>
+              <option value="">#1</option>
+              <option value="">#2</option>
+              <option value="">#3</option>
+              <option value="">#4</option>
+            </select>
+            <img
+              src="assets/dropdown-icon.svg"
+              alt="dropdown menu"
+              class="form__icon" />
+            <p class="form__label">Message</p>
+            <!--  <input type="text" class="form__input form__input--message" /><br /> -->
+            <textarea class="form__input form__input--message"></textarea>
+            <input type="submit" value="Get in Touch" class="form__submit" />
+          </form>
+        </div>
+        <div class="work-together">
+          <h2 class="title title--work-together">
+            Let’s<br />
+            Work Together -
+          </h2>
+          <div class="work-together__wrapper">
+            <img
+              src="assets/gmail-icon.svg"
+              alt="Gmail"
+              class="work-together__icon" />
+            <p class="work-together__email">Georgy@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <hr class="footer__line" />
+      <div class="container">
+        <div class="footer__wrapper">
+          <p class="footer__text-rights">© 2023 All rights reserved.</p>
+          <div class="footer__socials">
+            <a href="#">
+              <img
+                src="assets/linkedin-icon.svg"
+                alt="Linkedin"
+                class="footer__icon"
+            /></a>
+            <a href="#">
+              <img
+                src="assets/dribbble-icon.svg"
+                alt="Dribbble"
+                class="footer__icon"
+            /></a>
+            <a href="#">
+              <img
+                src="assets/facebook-icon.svg"
+                alt="Facebook"
+                class="footer__icon"
+            /></a>
+            <a href="#">
+              <img
+                src="assets/instagram-icon.svg"
+                alt="Instagram"
+                class="footer__icon"
+            /></a>
+            <a href="#">
+              <img
+                src="assets/twitter-icon.svg"
+                alt="Twitter"
+                class="footer__icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
