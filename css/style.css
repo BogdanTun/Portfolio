@@ -7,7 +7,7 @@
   --text-button-color: #ffffff;
   --secondary-text-button-color: #ffffff;
   --button-border-color: #4fc3f7;
-  --secondary-button-border-color: #4fc3f7;
+  --button-active: #4fc3f7;
   --link--on: #4fc3f7;
   /* hero */
   --title-text-color: #ffffff;
@@ -51,7 +51,6 @@
   --text-button-color: #484e53;
   --secondary-text-button-color: #1c1e53;
   --button-border-color: #484e53;
-  --secondary-button-border-color: #585858;
   /* hero */
   --title-text-color: #484e53;
   --title-secondary-text-color: #2b2b2b;
@@ -124,19 +123,35 @@
   font-weight: 500;
   font-style: normal;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.button:hover {
+  background-color: var(--button-active);
 }
 .button__theme-icon {
   width: 30px;
   height: 30px;
 }
 .navbar__content {
-  margin-top: 60.5px;
-  margin-bottom: 34px;
+  padding-top: 60.5px;
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 99;
+  background-color: var(--background-color);
+  transition: top 0.3s ease-in-out;
+  max-width: 1140px;
+  top: 0;
+}
+.navbar--scrolled {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.navbar--hidden {
+  top: -110px;
 }
 .navbar__name {
   font-size: 2rem;
@@ -147,6 +162,9 @@
 }
 .button--theme {
   border: none;
+}
+.button--theme:hover {
+  background-color: transparent;
 }
 .button--menu {
   display: none;
@@ -182,6 +200,7 @@
   align-items: center;
 }
 .hero {
+  margin-top: 139px;
   padding: 0px 116px 0px;
   display: flex;
   flex-direction: column;
@@ -399,6 +418,10 @@ br {
   border: 1px solid var(--projects-button);
   border-radius: 50px;
 }
+.projects__button:hover {
+  background-color: var(--projects-button);
+  color: var(--projects-active-button-text);
+}
 .projects__button--border-machine {
   padding: 16px 32px;
 }
@@ -436,8 +459,11 @@ br {
 .projects__image {
   width: 100%;
   height: 100%;
-  margin-bottom: 32px;
   object-fit: cover;
+}
+.link--projects-card {
+  line-height: initial;
+  margin-bottom: 32px;
   overflow: hidden;
 }
 .projects__text-title {
@@ -472,6 +498,11 @@ br {
   border-radius: 75px;
   padding: 19px 75px;
   color: var(--text-button-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.link--projects:hover {
+  background-color: var(--projects-button);
+  color: var(--projects-active-button-text);
 }
 .contact {
   display: flex;
@@ -588,8 +619,12 @@ br {
   line-height: 149%;
 }
 .footer__line {
-  color: var(--footer-line);
   margin-bottom: 45px;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--footer-line);
+  padding: 0;
 }
 .footer__wrapper {
   width: 100%;
