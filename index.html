@@ -17,26 +17,26 @@
     <header class="header">
       <div class="container">
         <nav class="navbar">
-          <div class="navbar__content">
-            <h1 class="navbar__name">Georgy</h1>
+          <div class="navbar__content" id="navbar">
+            <h1 class="navbar__name">Bohdan</h1>
             <ul class="nav-list">
               <li class="nav-list__item">
-                <a class="link link--nav link--on" href="#">Home</a>
+                <a class="link link--nav" href="#hero">Home</a>
               </li>
               <li class="nav-list__item">
                 <a class="link link--nav" href="#about">About</a>
               </li>
               <li class="nav-list__item">
-                <a class="link link--nav" href="#projects">Projects</a>
-              </li>
-              <li class="nav-list__item">
                 <a class="link link--nav" href="#services">Services</a>
               </li>
               <li class="nav-list__item">
-                <a class="link link--nav" href="#resume">Resume</a>
+                <a class="link link--nav" href="#projects">Projects</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="link link--nav" href="#contact">Resume</a>
               </li>
             </ul>
-            <button class="button button--nav">Contact me</button>
+            <a class="button button--nav" href="#contact">Contact me</a>
             <button class="button button--theme" id="theme-switch">
               <img
                 src="assets/darkmode-theme-icon.svg"
@@ -56,11 +56,10 @@
     </header>
     <main class="main">
       <div class="container container--main">
-        <div class="hero">
-          <div class="hero__background"></div>
+        <div class="hero" id="hero">
           <img src="assets/avatar.png" alt="Avatar" class="hero__avatar" />
           <!--only one h1 per page. Времено заменю подзагаловки на p-->
-          <h2 class="hero__name">Georgy Georgy</h2>
+          <h2 class="hero__name">Bohdan Tunik</h2>
           <div class="gradient-wrapper">
             <p class="gradient gradient--hero">Data Sorcerer</p>
             <p class="gradient--hero">🧙‍♂️</p>
@@ -72,7 +71,7 @@
             complex data landscapes and uncovering meaningful patterns that
             drive innovation
           </p>
-          <button class="button button--hero">Contact me</button>
+          <a class="button button--hero" href="#contact">Contact me</a>
         </div>
         <div class="about" id="about">
           <h2 class="title title--about">About me</h2>
@@ -208,15 +207,19 @@
           </ul>
           <div class="projects__card-wrapper">
             <div class="projects__card">
-              <img
-                src="assets/www.bialetti.com_es_es_.png"
-                alt=""
-                class="projects__image" />
-              <p class="projects__text-title">bialetti.com</p>
+              <a class="link link--projects-card" href="https://bialetti.com"
+                ><img
+                  src="assets/www.bialetti.com_es_es_.png"
+                  alt=""
+                  class="projects__image"
+              /></a>
+              <a class="link projects__text-title" href="https://bialetti.com"
+                >bialetti.com</a
+              >
               <p class="projects__text-description">
                 HTML, CSS, JQuery, RequireJS
               </p>
-              <a href="#"
+              <a href="https://bialetti.com"
                 ><img
                   src="assets/arrow.svg"
                   alt="arrow"
@@ -224,15 +227,19 @@
               /></a>
             </div>
             <div class="projects__card">
-              <img
-                src="assets/www.lolahome.es_.png"
-                alt=""
-                class="projects__image" />
-              <p class="projects__text-title">lolahome.es</p>
+              <a class="link link--projects-card" href="https://lolahome.es"
+                ><img
+                  src="assets/www.lolahome.es_.png"
+                  alt=""
+                  class="projects__image"
+              /></a>
+              <a class="link projects__text-title" href="https://lolahome.es"
+                >lolahome.es</a
+              >
               <p class="projects__text-description">
                 HTML, Tailwind CSS, Splide, Alpine.js
               </p>
-              <a href="#"
+              <a href="https://lolahome.es"
                 ><img
                   src="assets/arrow.svg"
                   alt="arrow"
@@ -240,15 +247,19 @@
               /></a>
             </div>
             <div class="projects__card">
-              <img
-                src="assets/www.rowenta.es_.png"
-                alt=""
-                class="projects__image" />
-              <p class="projects__text-title">rowenta.es</p>
+              <a href="https://rowenta.es" class="link link--projects-card"
+                ><img
+                  src="assets/www.rowenta.es_.png"
+                  alt=""
+                  class="projects__image"
+              /></a>
+              <a class="link projects__text-title" href="https://rowenta.es"
+                >rowenta.es</a
+              >
               <p class="projects__text-description">
                 HTML, CSS, Node.js, Angular, Zone.js, JQuery
               </p>
-              <a href="#"
+              <a href="https://rowenta.es"
                 ><img
                   src="assets/arrow.svg"
                   alt="arrow"
@@ -256,15 +267,19 @@
               /></a>
             </div>
             <div class="projects__card projects__card--mobile">
-              <img
-                src="assets/www.tectake.es_es_.png"
-                alt=""
-                class="projects__image" />
-              <p class="projects__text-title">tectake.es</p>
+              <a href="https://www.tectake.es" class="link link--projects-card"
+                ><img
+                  src="assets/www.tectake.es_es_.png"
+                  alt=""
+                  class="projects__image"
+              /></a>
+              <a class="link projects__text-title" href="https://www.tectake.es"
+                >tectake.es</a
+              >
               <p class="projects__text-description">
                 HTML, Tailwind CSS, Alpine.js, Glider.js
               </p>
-              <a href="#"
+              <a href="https://www.tectake.es"
                 ><img
                   src="assets/arrow.svg"
                   alt="arrow"
@@ -272,15 +287,23 @@
               /></a>
             </div>
             <div class="projects__card projects__card--mobile">
-              <img
-                src="assets/es.russellhobbs.com_.png"
-                alt=""
-                class="projects__image" />
-              <p class="projects__text-title">es.russellhobbs.com</p>
+              <a
+                href="https://es.russellhobbs.com"
+                class="link link--projects-card"
+                ><img
+                  src="assets/es.russellhobbs.com_.png"
+                  alt=""
+                  class="projects__image"
+              /></a>
+              <a
+                class="link projects__text-title"
+                href="https://es.russellhobbs.com"
+                >es.russellhobbs.com</a
+              >
               <p class="projects__text-description">
                 HTML, CSS, JQuery, Vue.js
               </p>
-              <a href="#"
+              <a href="https://es.russellhobbs.com"
                 ><img
                   src="assets/arrow.svg"
                   alt="arrow"
@@ -288,15 +311,23 @@
               /></a>
             </div>
             <div class="projects__card projects__card--mobile">
-              <img
-                src="assets/www.arcos.com_es_ES.png"
-                alt=""
-                class="projects__image" />
-              <p class="projects__text-title">arcos.com</p>
+              <a
+                href="https://arcos.com/es_ES/"
+                class="link link--projects-card"
+                ><img
+                  src="assets/www.arcos.com_es_ES.png"
+                  alt=""
+                  class="projects__image"
+              /></a>
+              <a
+                class="link projects__text-title"
+                href="https://arcos.com/es_ES/"
+                >arcos.com</a
+              >
               <p class="projects__text-description">
                 HTML, CSS, JQuery, RequireJS
               </p>
-              <a href="#"
+              <a href="https://arcos.com/es_ES/"
                 ><img
                   src="assets/arrow.svg"
                   alt="arrow"
@@ -306,17 +337,22 @@
           </div>
           <a href="#" class="link link--projects">View All</a>
         </div>
-        <div class="contact" id="resume">
+        <div class="contact" id="contact">
           <h2 class="title">Get In Touch</h2>
           <p class="gradient gradient--contact">Lets work together</p>
           <form action="#" class="form">
             <p class="form__label">Name</p>
-            <input type="text" placeholder="full name" class="form__input" />
-            <p class="form__label">Email</p>
             <input
               type="text"
+              placeholder="full name"
+              class="form__input"
+              required />
+            <p class="form__label">Email</p>
+            <input
+              type="email"
               placeholder="example@email.com"
-              class="form__input" />
+              class="form__input"
+              required />
             <p class="form__label">Service</p>
             <select
               id="service"
@@ -336,8 +372,9 @@
               alt="dropdown menu"
               class="form__icon" />
             <p class="form__label">Message</p>
-            <!--  <input type="text" class="form__input form__input--message" /><br /> -->
-            <textarea class="form__input form__input--message"></textarea>
+            <textarea
+              class="form__input form__input--message"
+              required></textarea>
             <input type="submit" value="Get in Touch" class="form__submit" />
           </form>
         </div>
@@ -351,7 +388,7 @@
               src="assets/gmail-icon.svg"
               alt="Gmail"
               class="work-together__icon" />
-            <p class="work-together__email">Georgy@gmail.com</p>
+            <p class="work-together__email">bogdantunik53@gmail.com</p>
           </div>
         </div>
       </div>
@@ -360,7 +397,7 @@
       <hr class="footer__line" />
       <div class="container">
         <div class="footer__wrapper">
-          <p class="footer__text-rights">© 2023 All rights reserved.</p>
+          <p class="footer__text-rights">© 2025 All rights reserved.</p>
           <div class="footer__socials">
             <a href="#">
               <img
